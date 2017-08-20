@@ -57,6 +57,7 @@ body, html {
 		line-height: 100vw;
 		font-size: 16vw;
 	}
+	#aShadow, #bShadow { top: calc(30vh + 10%) }
 }
 @media screen and (orientation:landscape) {	
 	#bButton, #aButton { margin-top: 15vh }
@@ -91,11 +92,14 @@ body, html {
 		line-height: 100vh;
 		font-size: 16vh;
 	}
+	#aShadow, #bShadow { top: calc(30vw + 10%) }
 }
 .clear { clear: both }
 a { cursor: pointer}
 @media screen and (max-height: 310px) { #aSection, #bSection { zoom: 80%; }}
-@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important;}#clickToStart{top:50px!important;}}
+@media screen and (max-height: 500px) and (orientation:portrait){#aShadow,#bShadow{top:calc(50px + 30vh)}}
+@media screen and (max-height: 500px) and (orientation:landscape){#aShadow,#bShadow{top:calc(50px + 30vw)}}
+@media screen and (max-height: 500px) { #aButton,#bButton{margin-top:50px!important}#clickToStart{top:50px!important}}
 @media screen and (max-width: 800px) { #clickToStart { font-size: 15px !important; line-height: 15px !important; padding: calc(30% - 7.5px) 0 !important; } }
 @media screen and (max-width: 600px) { #clickToStart { font-size: 12px !important; line-height: 12px !important; padding: calc(30% - 6px) 0 !important; } }
 header {
@@ -160,8 +164,8 @@ section { width: 50%; height: 100%; float: left; position: relative;background-s
 	opacity: 0.5;
 	background: #000;
 	height: 5%;
-	top: 48%;
 	border-radius: 50%;
+	box-shadow: 0 0 5px #000;
 }
 #aHealth, #bHealth {
 	margin: auto;
