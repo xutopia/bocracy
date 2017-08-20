@@ -22,12 +22,14 @@
 	</header>
 	<section id="bSection">
 		<div id="bButton" ontouchend="game.heal('green')"></div>
+		<div id="bShadow"></div>
 		<div id="bName"></div>
 		<div id="bHealth"><div id="bHealthBar"></div><p></p></div>
 	</section>
 	<section id="aSection">
 		<div id="aButton" ontouchend="game.attack('green')"></div>
 		<div id="clickToStart" ontouchend="game.on='true';game.attack('green');base=new Date().getTime();document.getElementById('refreshButton').style.display='none'">Click to start</div>
+		<div id="aShadow"></div>
 		<div id="aName"></div>
 		<div id="aHealth"><div id="aHealthBar"></div><p></p></div>
 	</section>
